@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cricket Players</title>
+</head>
+<body>
+    <h1>Cricket Players</h1>
+    
+    <h2>Filter by Bowling Style:</h2>
+    <ul>
+        <li><a href="/players/bowling/legbreak">Legbreak</a></li>
+        <li><a href="/players/bowling/right-arm-fast-medium">Right-arm Fast Medium</a></li>
+        <!-- Add more bowling styles as needed -->
+    </ul>
+    
+    <h2>Filter by Batting Style:</h2>
+    <ul>
+        <li><a href="/players/batting/right-hand-bat">Right-hand Bat</a></li>
+        <li><a href="/players/batting/left-hand-bat">Left-hand Bat</a></li>
+        <!-- Add more batting styles as needed -->
+    </ul>
+
+    {{ table|safe }}
+</body>
+</html>
