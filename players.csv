@@ -1,4 +1,4 @@
-Player ID,Country ID,First Name,Last Name,Date of Birth,Gender,Batting Style,Bowling Style,Postion
+Player_ID,Country_ID,First_Name,Last_Name,Date_of_Birth,Gender,Batting_Style,Bowling_Style,Postion
 2,52126,Ahmed,Shehzad,1991-11-23,m,right-hand-bat,legbreak,Batsman
 3,52126,Anwar,Ali,1987-11-25,m,right-hand-bat,right-arm-fast-medium,Bowler
 4,52126,Sarfraz,Ahmed,1987-05-22,m,right-hand-bat,right-arm-offbreak,Wicketkeeper
