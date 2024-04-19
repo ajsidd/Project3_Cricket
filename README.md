@@ -1,4 +1,4 @@
-# Cricket Players Directory
+# Cricket Players App
 
 This is a simple Flask web application to browse cricket players based on their bowling style, batting style, and position.
 
