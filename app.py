@@ -20,22 +20,6 @@ connection_string = f"postgresql://{db_config['user']}:{db_config['password']}@{
 def index():
     return render_template('index.html')
 
-@app.route('/players')
-def get_players():
-    # Create a SQLAlchemy engine
-    engine = create_engine(connection_string)
-    
-    # Query the 'players_data' table
-    query = "SELECT * FROM players_data;"
-    
-    # Read data into a DataFrame
-    df = pd.read_sql_query(query, engine)
-    
-    # Convert DataFrame to HTML table
-    table_html = df.to_html(index=False)
-
-    return render_template('index.html', table=table_html)
-
 @app.route('/players/bowling/<bowling_style>')
 def get_players_by_bowling_style(bowling_style):
     # Create a SQLAlchemy engine
@@ -59,6 +43,22 @@ def get_players_by_batting_style(batting_style):
     
     # Query the 'players_data' table for players with specific batting style
     query = f"SELECT * FROM players_data WHERE lower(\"Batting_Style\") = lower('{batting_style}');"
+    
+    # Read data into a DataFrame
+    df = pd.read_sql_query(query, engine)
+    
+    # Convert DataFrame to HTML table
+    table_html = df.to_html(index=False)
+
+    return render_template('index.html', table=table_html)
+
+@app.route('/players/position/<position>')
+def get_players_by_position(position):
+     # Create a SQLAlchemy engine
+    engine = create_engine(connection_string)
+    
+    # Query the 'players_data' table for players with specific batting style
+    query = f"SELECT * FROM players_data WHERE lower(\"position\") = {position}"
     
     # Read data into a DataFrame
     df = pd.read_sql_query(query, engine)
