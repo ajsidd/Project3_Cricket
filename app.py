@@ -52,13 +52,17 @@ def get_players_by_batting_style(batting_style):
 
     return render_template('index.html', table=table_html)
 
-@app.route('/players/position/<position>')
-def get_players_by_position(position):
+@app.route('/players/position/<position_name>')
+def get_players_by_position(position_name):
      # Create a SQLAlchemy engine
     engine = create_engine(connection_string)
+
+    # Convert position_name to match the format in the database
+    position_name = position_name.replace('-', ' ')
+
     
     # Query the 'players_data' table for players with specific batting style
-    query = f"SELECT * FROM players_data WHERE lower(\"position\") = {position}"
+    query = f"SELECT * FROM players_data WHERE lower(\"Position\") = lower('{position_name}');"
     
     # Read data into a DataFrame
     df = pd.read_sql_query(query, engine)
