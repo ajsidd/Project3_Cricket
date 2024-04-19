@@ -28,7 +28,7 @@ This is a simple Flask web application to browse cricket players based on their 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/cricket-players-directory.git
+    git clone https://github.com/kasheshjaiin/cricket-players-directory.git
     ```
 
 2. Navigate to the project directory:
