@@ -64,8 +64,8 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## Contributors
 
-- [Contributor 1](https://github.com/khanali37gmail)
-- [Contributor 2](https://github.com/ajsidd)
-- [Contributor 3](https://github.com/Emadkamali)
-- [Contributor 4](https://github.com/kasheshjaiin)
+- [Ali Khan](https://github.com/khanali37gmail)
+- [Amir Siddique](https://github.com/ajsidd)
+- [Emad Kamali](https://github.com/Emadkamali)
+- [Kashish Jain](https://github.com/kasheshjaiin)
 
