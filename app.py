@@ -32,7 +32,7 @@ def get_players_by_bowling_style(bowling_style):
     df = pd.read_sql_query(query, engine)
     
     # Convert DataFrame to HTML table
-    table_html = df.to_html(index=False)
+    table_html = df.to_html(index=False, classes="table table-striped")
 
     return render_template('index.html', table=table_html)
 
@@ -48,7 +48,7 @@ def get_players_by_batting_style(batting_style):
     df = pd.read_sql_query(query, engine)
     
     # Convert DataFrame to HTML table
-    table_html = df.to_html(index=False)
+    table_html = df.to_html(index=False, classes="table table-striped")
 
     return render_template('index.html', table=table_html)
 
@@ -68,7 +68,7 @@ def get_players_by_position(position_name):
     df = pd.read_sql_query(query, engine)
     
     # Convert DataFrame to HTML table
-    table_html = df.to_html(index=False)
+    table_html = df.to_html(index=False, classes="table table-striped")
 
     return render_template('index.html', table=table_html)
 
