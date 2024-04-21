@@ -4,7 +4,18 @@
 .container {
     max-width: 800px;
     margin-top: 50px;
+    background-color: #f4f4f4; /* Light gray background color */
+    padding: 20px; /* Add some padding inside the container */
+    border-radius: 10px; /* Add some rounded corners to the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
 }
+
+/* Style the logo */
+.logo {
+    height: 50px;  /* Set the height as per your requirement */
+    margin-right: 10px; /* Add some margin to the right for spacing */
+}
+
 
 /* Style the form */
 .filter-list {

@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}">
 </head>
 <body>
-    <h1>Cricket Players</h1>
+    <div class="container">
+        <h1><img src="{{ url_for('static', filename='logo.jpg') }}" alt="Cricket" class="logo"> Cricket Players</h1>
     
     <form action="/filtered-players" method="post">
         <h2>Filter by Bowling Style:</h2>
@@ -42,6 +43,7 @@
 
         <input type="submit" value="Filter" class="btn btn-primary">
     </form>
+    </div>
 
     {{ table|safe }}
 
