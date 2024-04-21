@@ -1,0 +1,38 @@
+/* Add custom styles for your app */
+
+/* Center the content */
+.container {
+    max-width: 800px;
+    margin-top: 50px;
+}
+
+/* Style the form */
+.filter-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;             /* Use flexbox */
+    flex-wrap: wrap;           /* Allow wrapping */
+    justify-content: start;    /* Start from the left */
+}
+
+.filter-list li {
+    margin-right: 20px;       /* Add some space between radio buttons */
+}
+
+/* Style the radio button */
+.filter-list input[type="radio"] {
+    margin-right: 5px;        /* Add some space between radio button and label */
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
