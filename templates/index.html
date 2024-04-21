@@ -1,48 +1,45 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title>Cricket Players</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <h1>Cricket Players</h1>
     
-    <form action="/filtered-players" method="post">
-        <h2>Filter by Bowling Style:</h2>
-        <ul class="filter-list">
-            <li><input type="radio" name="bowling_style" value="right-arm-fast-medium">Right-arm Fast Medium</li>
-            <li><input type="radio" name="bowling_style" value="right-arm-offbreak">Right-arm Offbreak</li>
-            <li><input type="radio" name="bowling_style" value="right-arm-fast">Right-arm Fast</li>
-            <li><input type="radio" name="bowling_style" value="slow-right-arm-orthodox">Right Left Arm Orthodox</li>
-            <li><input type="radio" name="bowling_style" value="left-arm-fast-medium">Left-arm Fast Medium</li>
-            <li><input type="radio" name="bowling_style" value="legbreak">Legbreak</li>
-            <li><input type="radio" name="bowling_style" value="left-arm-fast">Left-arm Fast</li>
-            <li><input type="radio" name="bowling_style" value="slow-right-arm-orthodox">Slow Left Arm Orthodox</li>
-            <li><input type="radio" name="bowling_style" value="left-arm-chinaman">Left-arm Chinman</li>
-        </ul>
-        
-        <h2>Filter by Batting Style:</h2>
-        <ul class="filter-list">
-            <li><input type="radio" name="batting_style" value="right-hand-bat">Right-hand Bat</li>
-            <li><input type="radio" name="batting_style" value="left-hand-bat">Left-hand Bat</li>
-        </ul>
+    <h2>Filter by Bowling Style:</h2>
+    <ul>
+        <li><a href="/players/bowling/right-arm-fast-medium">Right-arm Fast Medium</a></li>
+        <li><a href="/players/bowling/right-arm-offbreak">Right-arm Offbreak</a></li>
+        <li><a href="/players/bowling/right-arm-fast">Right-arm Fast</a></li>
+        <li><a href="/players/bowling/slow-right-arm-orthodox">Right Left Arm Orthodox</a></li>
+        <li><a href="/players/bowling/left-arm-fast-medium">Left-arm Fast Medium</a></li>
+        <li><a href="/players/bowling/legbreak">Legbreak</a></li>
+        <li><a href="/players/bowling/left-arm-fast">Left-arm Fast</a></li>
+        <li><a href="/players/bowling/slow-right-arm-orthodox">Slow Left Arm Orthodox</a></li>
+        <li><a href="/players/bowling/left-arm-chinaman">Left-arm Chinman</a></li>
+    </ul>
+    
+    <h2>Filter by Batting Style:</h2>
+    <ul>
+        <li><a href="/players/batting/right-hand-bat">Right-hand Bat</a></li>
+        <li><a href="/players/batting/left-hand-bat">Left-hand Bat</a></li>
+    </ul>
 
-        <h2>Filter by Position:</h2>
-        <ul class="filter-list">
-            <li><input type="radio" name="position" value="bowler">Bowler</li>
-            <li><input type="radio" name="position" value="allrounder">Allrounder</li>
-            <li><input type="radio" name="position" value="batsman">Batsman</li>
-            <li><input type="radio" name="position" value="wicketkeeper">Wicketkeeper</li>
-            <li><input type="radio" name="position" value="middle-order-batter">Middle Order Batter</li>
-            <li><input type="radio" name="position" value="bowling-allrounder">Bowling Allrounder</li>
-            <li><input type="radio" name="position" value="top-order-batter">Top Order Batter</li>
-            <li><input type="radio" name="position" value="batting-allrounder">Batting Allrounder</li>
-        </ul>
-
-        <input type="submit" value="Filter">
-    </form>
-
+    <h2>Filter by Position:</h2>
+    <ul>
+        <li><a href="/players/position/Bowler">Bowler</a></li>
+        <li><a href="/players/position/Allrounder">Allrounder</a></li>
+        <li><a href="/players/position/bowler">Bowler</a></li>
+        <li><a href="/players/position/allrounder">Allrounder</a></li>
+        <li><a href="/players/position/batsman">Batsman</a></li>
+        <li><a href="/players/position/wicketkeeper">Wicketkeeper</a></li>
+        <li><a href="/players/position/bowling allrounder">Bowling Allrounder</a></li>
+        <li><a href="/players/position/middle-order-batter">Middle Order Batter</a></li>
+        <li><a href="/players/position/bowling-allrounder">Bowling Allrounder</a></li>
+        <li><a href="/players/position/top-order-batter">Top Order Batter</a></li>
+        <li><a href="/players/position/batting-allrounder">Batting Allrounder</a></li>
+    </ul>
     {{ table|safe }}
-
 </body>
 </html>
