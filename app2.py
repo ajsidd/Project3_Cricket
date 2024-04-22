@@ -1,20 +1,18 @@
 from flask import Flask, render_template, request
 from sqlalchemy import create_engine
 import pandas as pd
+from config import password, endpoint
 
 app = Flask(__name__)
 
 # Database connection parameters
-db_config = {
-    'dbname': 'cricket',
-    'user': 'postgres',
-    'password': 'postgres',
-    'host': 'localhost',
-    'port': '5432'
-}
+PGEND_POINT = endpoint # End_point
+PGDATABASE_NAME = 'project3' # Database Name example: youtube_test_db
+PGUSER_NAME = 'postgres' # UserName
+PGPASSWORD = password # Password
 
 # Connection string for PostgreSQL
-connection_string = f"postgresql://{db_config['user']}:{db_config['password']}@{db_config['host']}:{db_config['port']}/{db_config['dbname']}"
+engine = create_engine(f'postgresql://{PGUSER_NAME}:{PGPASSWORD}@{PGEND_POINT}:5432/{PGDATABASE_NAME}')
 
 @app.route('/')
 def index():
@@ -22,7 +20,6 @@ def index():
 
 @app.route('/filtered-players', methods=['GET', 'POST'])
 def filtered_players():
-    engine = create_engine(connection_string)
 
     bowling_style = request.form.get('bowling_style')
     batting_style = request.form.get('batting_style')
