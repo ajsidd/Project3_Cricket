@@ -81,14 +81,6 @@ The application is deployed on AWS Elastic Beanstalk. To deploy the application:
 - If you encounter any issues related to database connectivity or queries, check the database connection parameters and ensure the PostgreSQL server is running.
 - Make sure to set the correct environment variables before running or deploying the application.
 
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 
 ## Contributors
 
