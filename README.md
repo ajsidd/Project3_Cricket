@@ -1,57 +1,94 @@
-# Cricket Players App
+# Cricket Players Filter App
 
-A simple Flask web application to display and filter cricket players based on their bowling style, batting style, and position.
+This Flask application allows users to filter cricket players based on various criteria like bowling style, batting style, and position. The application uses a PostgreSQL database to store player data and SQLAlchemy for database interaction. The application is deployed on AWS Elastic Beanstalk.
+
+## Versions
+
+- **app.py**: This version of the application uses separate routes for filtering by bowling style, batting style, and position.
+- **app2.py**: This version uses a single route with radio buttons for multiple filters and a submit button to run the query.
 
 ## Features
 
-- Filter players by bowling style
-- Filter players by batting style
-- Filter players by position
+- **Filter by Bowling Style**: Filter players by their bowling style.
+- **Filter by Batting Style**: Filter players by their batting style.
+- **Filter by Position**: Filter players by their playing position.
+- **Responsive Design**: The application UI is designed to be responsive using Bootstrap.
 
-## Technologies Used
-
-- Flask
-- SQLAlchemy
-- pandas
-- psycopg2
-- HTML/CSS
-
-## Installation
-
-### Prerequisites
+## Prerequisites
 
 - Python 3.x
 - PostgreSQL
+- AWS account (for deployment)
 
-### Steps
+## Installation
 
 1. Clone the repository:
-    ```bash
-    git clone https://github.com/yourusername/cricket-players-directory.git
-    ```
+   \```bash
+   git clone https://github.com/your_username/cricket-players-filter.git
+   cd cricket-players-filter
+   \```
 
-2. Navigate to the project directory:
-    ```bash
-    cd cricket-players-directory
-    ```
+2. Install the required Python packages:
+   \```bash
+   pip install -r requirements.txt
+   \```
 
-3. Install the required packages:
-    ```bash
-    pip install -r requirements.txt
-    ```
+3. Set up environment variables:
+   - `DB_ENDPOINT`: PostgreSQL endpoint
+   - `DB_PASSWORD`: PostgreSQL password
 
-4. Set up the PostgreSQL database:
-    - Update `db_config` in `app.py` with your PostgreSQL credentials.
+## Configuration
 
-5. Run the Flask application:
-    ```bash
-    python app.py
-    ```
+The application uses environment variables to configure the database connection. Set the following environment variables before running the application:
+
+\```bash
+export DB_ENDPOINT=your_postgresql_endpoint
+export DB_PASSWORD=your_postgresql_password
+\```
 
 ## Usage
 
-- Visit [http://localhost:5000](http://localhost:5000) to access the application.
-- Use the provided links to filter players based on bowling style, batting style, or position.
+### app.py
+
+Run the `app.py` using the following command:
+
+\```bash
+python app.py
+\```
+
+Navigate to `http://localhost:5000` to access the application.
+
+### app2.py
+
+Run the `app2.py` using the following command:
+
+\```bash
+python app2.py
+\```
+
+Navigate to `http://localhost:5000` to access the application.
+
+## Deployment on AWS
+
+The application is deployed on AWS Elastic Beanstalk. To deploy the application:
+
+1. Create an AWS Elastic Beanstalk environment.
+2. Configure the environment with the necessary environment variables (`DB_ENDPOINT` and `DB_PASSWORD`).
+3. Deploy the application using `eb deploy`.
+
+## Troubleshooting
+
+- If you encounter any issues related to database connectivity or queries, check the database connection parameters and ensure the PostgreSQL server is running.
+- Make sure to set the correct environment variables before running or deploying the application.
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
 
 ## Contributors
 
