@@ -23,7 +23,7 @@ def filtered_players():
 
     bowling_style = request.form.get('bowling_style')
     batting_style = request.form.get('batting_style')
-    position_name = request.form.get('position_name')
+    position_name = request.form.get('position')
 
     filters = []
     if bowling_style:
@@ -37,6 +37,7 @@ def filtered_players():
     if filters:
         where_clause = " AND ".join(filters)
         query = f"SELECT * FROM players_data WHERE {where_clause};"
+        print(f"Generated SQL query: {query}")  # Debugging line
 
         df = pd.read_sql_query(query, engine)
         table_html = df.to_html(index=False, classes="table table-striped")
