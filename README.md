@@ -17,7 +17,6 @@ This Flask application allows users to filter cricket players based on various c
 ## Prerequisites
 
 - Python 3.x
-- PostgreSQL
 - AWS account (for deployment)
 
 ## Installation
