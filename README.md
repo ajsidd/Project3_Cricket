@@ -24,7 +24,7 @@ This Flask application allows users to filter cricket players based on various c
 
 1. Clone the repository:
    \```bash
-   git clone https://github.com/your_username/cricket-players-filter.git
+   git clone https://github.com/kasheshjaiin/cricket-players-filter.git
    cd cricket-players-filter
    \```
 
