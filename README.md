@@ -85,6 +85,6 @@ The application is deployed on AWS Elastic Beanstalk. To deploy the application:
 ## Contributors
 
 - [Ali Khan](https://github.com/khanali37gmail)
-- [Amir Siddique](https://github.com/ajsidd)
+- [Amir Siddiqui](https://github.com/ajsidd)
 - [Emad Kamali](https://github.com/Emadkamali)
 - [Kashish Jain](https://github.com/kasheshjaiin)
